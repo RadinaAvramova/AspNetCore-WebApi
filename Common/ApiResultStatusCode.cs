@@ -1,28 +1,29 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Common
 {
     public enum ApiResultStatusCode
     {
-        [Display(Name = "عملیات با موفقیت انجام شد")]
+        [Display(Name = "Operation completed successfully")]
         Success = 0,
 
-        [Display(Name = "خطایی در سرور رخ داده است")]
+        [Display(Name = "A server error occurred")]
         ServerError = 1,
 
-        [Display(Name = "پارامتر های ارسالی معتبر نیستند")]
+        [Display(Name = "Invalid parameters sent")]
         BadRequest = 2,
 
-        [Display(Name = "یافت نشد")]
+        [Display(Name = "Not found")]
         NotFound = 3,
 
-        [Display(Name = "لیست خالی است")]
+        [Display(Name = "List is empty")]
         ListEmpty = 4,
 
-        [Display(Name = "خطایی در پردازش رخ داد")]
+        [Display(Name = "Processing error occurred")]
         LogicError = 5,
 
-        [Display(Name = "خطای احراز هویت")]
+        [Display(Name = "Authentication error")]
         UnAuthorized = 6
     }
 }
+
