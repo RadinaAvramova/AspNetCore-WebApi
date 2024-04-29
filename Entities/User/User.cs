@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -36,10 +36,11 @@ namespace Entities
 
     public enum GenderType
     {
-        [Display(Name = "مرد")]
+        [Display(Name = "Male")]
         Male = 1,
 
-        [Display(Name = "زن")]
+        [Display(Name = "Female")]
         Female = 2
     }
 }
+
