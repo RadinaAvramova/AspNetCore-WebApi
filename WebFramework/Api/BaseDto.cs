@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Entities;
 using System.ComponentModel.DataAnnotations;
 using WebFramework.CustomMapping;
@@ -9,7 +9,7 @@ namespace WebFramework.Api
         where TDto : class, new()
         where TEntity : BaseEntity<TKey>, new()
     {
-        [Display(Name = "ردیف")]
+        [Display(Name = "Id")]
         public TKey Id { get; set; }
 
         public TEntity ToEntity()
@@ -22,9 +22,9 @@ namespace WebFramework.Api
             return Mapper.Map(CastToDerivedClass(this), entity);
         }
 
-        public static TDto FromEntity(TEntity model)
+        public static TDto FromEntity(TEntity entity)
         {
-            return Mapper.Map<TDto>(model);
+            return Mapper.Map<TDto>(entity);
         }
 
         protected TDto CastToDerivedClass(BaseDto<TDto, TEntity, TKey> baseInstance)
@@ -38,7 +38,7 @@ namespace WebFramework.Api
 
             var dtoType = typeof(TDto);
             var entityType = typeof(TEntity);
-            //Ignore any property of source (like Post.Author) that dose not contains in destination 
+            // Ignore any property from the source (e.g., Post.Author) that does not exist in the destination
             foreach (var property in entityType.GetProperties())
             {
                 if (dtoType.GetProperty(property.Name) == null)
