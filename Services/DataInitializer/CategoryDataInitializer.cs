@@ -1,4 +1,4 @@
-﻿using Data.Repositories;
+using Data.Repositories;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -18,27 +18,28 @@ namespace Services.DataInitializer
 
         public void InitializeData()
         {
-            if (!repository.TableNoTracking.Any(p => p.Name == "دسته بندی اولیه 1"))
+            if (!repository.TableNoTracking.Any(p => p.Name == "Initial Category 1"))
             {
                 repository.Add(new Category
                 {
-                    Name = "دسته بندی اولیه 1"
+                    Name = "Initial Category 1"
                 });
             }
-            if (!repository.TableNoTracking.Any(p => p.Name == "دسته بندی اولیه 2"))
+            if (!repository.TableNoTracking.Any(p => p.Name == "Initial Category 2"))
             {
                 repository.Add(new Category
                 {
-                    Name = "دسته بندی اولیه 2"
+                    Name = "Initial Category 2"
                 });
             }
-            if (!repository.TableNoTracking.Any(p => p.Name == "دسته بندی اولیه 3"))
+            if (!repository.TableNoTracking.Any(p => p.Name == "Initial Category 3"))
             {
                 repository.Add(new Category
                 {
-                    Name = "دسته بندی اولیه 3"
+                    Name = "Initial Category 3"
                 });
             }
         }
     }
 }
+
