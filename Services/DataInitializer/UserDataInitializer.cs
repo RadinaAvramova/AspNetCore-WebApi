@@ -23,8 +23,8 @@ namespace Services.DataInitializer
                 var user = new User
                 {
                     Age = 25,
-                    FullName = "محمد جوادابراهیمی",
-                    Gender = GenderType.Male,
+                    FullName = "Radina Avramova"
+                    Gender = GenderType.Female,
                     UserName = "admin",
                     Email = "admin@site.com"
                 };
