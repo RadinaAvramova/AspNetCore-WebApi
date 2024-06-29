@@ -23,7 +23,7 @@ namespace Services.DataInitializer
                 var user = new User
                 {
                     Age = 25,
-                    FullName = "Radina Avramova"
+                    FullName = ""
                     Gender = GenderType.Female,
                     UserName = "admin",
                     Email = "admin@site.com"
