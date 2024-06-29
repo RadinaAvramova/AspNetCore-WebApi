@@ -142,9 +142,9 @@ namespace MyApi.Controllers.v1
         {
             return new UserDto
             {
-                FullName = "Radina Avramova",
+                FullName = "",
                 Age = 23,
-                UserName = "RadinaAvramova",
+                UserName = "",
                 Email = "admin@site.com",
                 Gender = Entities.GenderType.Male,
                 Password = "1234567"
@@ -158,9 +158,9 @@ namespace MyApi.Controllers.v1
         {
             return new UserDto
             {
-                FullName = "Radina Avramova",
+                FullName = "",
                 Age = 23,
-                UserName = "RadinaAvramova",
+                UserName = "",
                 Email = "admin@site.com",
                 Gender = Entities.GenderType.Male,
                 Password = "1234567"
